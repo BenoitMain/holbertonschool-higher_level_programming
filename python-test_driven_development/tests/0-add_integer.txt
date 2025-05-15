@@ -1,17 +1,27 @@
 >>> add_integer = __import__('0-add_integer').add_integer
->>> add_integer(1, 2)
+>>> print(add_integer(1, 2))
 3
->>> add_integer(100, -2)
+>>> print(add_integer(100, -2))
 98
->>> add_integer(2)
+>>> print(add_integer(2))
 100
->>> add_integer(100.3, -2)
+>>> print(add_integer(100.3, -2))
 98
->>> add_integer(4, "School")
+>>> try:
+...     print(add_integer(4, "School"))
+... except Exception as e:
+...     print(e)
+b must be an integer
+>>> try:
+...     print(add_integer(None))
+... except Exception as e:
+...     print(e)
+a must be an integer
+>>> print(add_integer(float('inf'), 1))
 Traceback (most recent call last):
 ...
-TypeError: b must be an integer
->>> add_integer(None)
+OverflowError: cannot convert float infinity to integer
+>>> print(add_integer(float('NaN'), 1))
 Traceback (most recent call last):
 ...
-TypeError: a must be an integer
+ValueError: cannot convert float NaN to integer
