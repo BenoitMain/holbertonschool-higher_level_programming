@@ -30,4 +30,3 @@ TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' an
 Traceback (most recent call last):
 ...
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
-

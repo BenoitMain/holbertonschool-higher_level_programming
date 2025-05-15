@@ -8,7 +8,6 @@ a new matrix. Floats are rounded to 2 decimal places.
 
 
 def matrix_divided(matrix, div):
-
     """
     Divides all elements of matrix by div, rounding to 2 decimals.
     """
@@ -26,8 +25,8 @@ def matrix_divided(matrix, div):
     for row in matrix:
         for elem in row:
             if not isinstance(elem, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists)"
-                                "ofintegers/floats")
+                raise TypeError(
+                    "matrix must be a matrix (list of lists) of integers/floats")
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
