@@ -11,6 +11,9 @@ thanks.
 >>> text_indentation("No punctuation here")
 No punctuation here
 
+>>> text_indentation("Holberton School")
+Holberton School
+
 >>> text_indentation(123)
 Traceback (most recent call last):
 ...
