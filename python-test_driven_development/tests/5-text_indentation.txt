@@ -1,13 +1,12 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
->>> text_indentation("Hello. How are you? I'm fine: thanks.")
+>>> text_indentation("Hello. How are you? I'm fine: thanks")
 Hello.
-
+<BLANKLINE>
 How are you?
-
+<BLANKLINE>
 I'm fine:
-
-thanks.
-
+<BLANKLINE>
+thanks
 >>> text_indentation("No punctuation here")
 No punctuation here
 

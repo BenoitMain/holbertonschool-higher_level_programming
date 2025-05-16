@@ -21,5 +21,5 @@ def text_indentation(text):
             print(buffer.strip())
             print()
             buffer = ""
-    if buffer:
-        print(buffer.strip())
+    if buffer.strip():
+        print(buffer.strip(), end="")
