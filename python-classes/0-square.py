@@ -8,5 +8,12 @@ Classes:
 
 
 class Square:
+    """
+    Represents a square.
 
-    pass
+    Attributes:
+        __size (int): The size of the square (private).
+    """
+    def __init__(self):
+        "Initializes an instance of square class"
+        pass
