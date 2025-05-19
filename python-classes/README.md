@@ -20,7 +20,7 @@
 - [🏗️ **Object Oriented Programming**](https://python.swaroopch.com/oop.html)
   *(Read everything up to the “Inheritance” section — skip it for now)*
 
-- 🧠 [**Object-Oriented Programming (realpython)**](https://python-course.eu/oop/object-oriented-programming.php)
+- [🧠 **Object-Oriented Programming**](https://python-course.eu/oop/object-oriented-programming.php)
 
   📌 Read the following sections only:
   - General Introduction
