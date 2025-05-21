@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+This module provides the Rectangle class.
+
+It supports computing area, perimeter, and text-based rendering.
+"""
+
 
 class Rectangle:
     """
@@ -77,19 +83,18 @@ class Rectangle:
         Returns:
             int: The area computed as width * height.
         """
-        return (self.height * self.width)
+        return (self.__height * self.__width)
 
     def perimeter(self):
         """Calculate the perimeter of the rectangle.
 
         Returns:
             int: The perimeter computed as 2*(width + height).
-                 Returns 0 if either width or height is 0.
         """
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         else:
-            return ((self.width * 2) + (self.height * 2))
+            return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
         """Return the string representation of the rectangle using '#'.
@@ -99,12 +104,12 @@ class Rectangle:
                 with width columns and height rows. Returns an empty string if
                 either width or height is 0.
         """
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ("")
         else:
             lignes = []
-            for _ in range(self.height):
-                lignes.append("#" * self.width)
+            for _ in range(self.__height):
+                lignes.append("#" * self.__width)
             return "\n".join(lignes)
 
     def __repr__(self):
