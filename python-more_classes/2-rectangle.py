@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This module provides the Rectangle class.
+It supports computing area, perimeter, and text-based rendering.
+"""
+
 
 class Rectangle:
     """
