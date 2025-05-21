@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+This module provides the Rectangle class.
+
+It supports computing area, perimeter, and text-based rendering.
+"""
+
 
 class Rectangle:
     """Representation of a rectangle.
@@ -115,7 +121,7 @@ class Rectangle:
         Returns:
         str: A string that can be passed to eval() to recreate this instance.
         """
-        return f"Rectangle({self.__width}, {self.__height})"
+        return f"Rectangle({self.__idth}, {self.__height})"
 
     def __del__(self):
         """Print a message upon deletion and decrement the instance counter."""
@@ -124,7 +130,8 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """Return the rectangle with the greater area.
+        """
+        Return the rectangle with the greater area.
     Compares the area of two Rectangle instances and returns the one
     with the greater or equal area. If both have the same area, returns rect_1.
     Args:
