@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+This module provides the Rectangle class.
+
+It supports computing area, perimeter, and text-based rendering.
+"""
+
 
 class Rectangle:
     """Representation of a rectangle.
@@ -84,7 +90,7 @@ class Rectangle:
         Returns:
             int: The area, calculated as width * height.
         """
-        return self.width * self.height
+        return self.__width * self.__height
 
     def perimeter(self):
         """Compute the perimeter of the rectangle.
@@ -93,9 +99,9 @@ class Rectangle:
             int: The perimeter, calculated as 2 * (width + height).
                 Returns 0 if either width or height is 0.
         """
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
-        return 2 * (self.width + self.height)
+        return 2 * (self.__width + self.__height)
 
     def __str__(self):
         """Generate the string representation using `print_symbol`.
@@ -104,10 +110,10 @@ class Rectangle:
             str: Multiline string of `print_symbol` forming the rectangle
                 dimensions, or an empty string if width or height is 0.
         """
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ""
-        line = str(self.print_symbol) * self.width
-        return "\n".join(line for _ in range(self.height))
+        line = str(self.print_symbol) * self.__width
+        return "\n".join(line for _ in range(self.__height))
 
     def __repr__(self):
         """Generate an official string representation.
@@ -115,7 +121,7 @@ class Rectangle:
         Returns:
         str: A string that can be passed to eval() to recreate this instance.
         """
-        return f"Rectangle({self.width}, {self.height})"
+        return f"Rectangle({self.__idth}, {self.__height})"
 
     def __del__(self):
         """Print a message upon deletion and decrement the instance counter."""
@@ -124,7 +130,8 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """Return the rectangle with the greater area.
+        """
+        Return the rectangle with the greater area.
     Compares the area of two Rectangle instances and returns the one
     with the greater or equal area. If both have the same area, returns rect_1.
     Args:
