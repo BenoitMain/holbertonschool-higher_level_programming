@@ -1,8 +1,10 @@
 # Ignore everything
-*
+*.pyc
 
 # But not these files...
 !.gitignore
 !*.py
 !*.md
+!*.txt
+
 
