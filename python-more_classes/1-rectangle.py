@@ -1,12 +1,19 @@
 #!/usr/bin/python3
+"""
+This module provides the Rectangle class.
+It supports computing area, perimeter, and text-based rendering.
+"""
+
 
 class Rectangle:
     """
     Representation of a rectangle.
-        Attributes:
+
+    Attributes:
         width (int): Rectangle width (must be >= 0).
         height (int): Rectangle height (must be >= 0).
     """
+
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
 
@@ -42,7 +49,7 @@ class Rectangle:
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
 
@@ -67,6 +74,6 @@ class Rectangle:
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
