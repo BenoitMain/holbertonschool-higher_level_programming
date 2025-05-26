@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Module that returns the list of available attributes and methods of an object.
+"""
+
 
 def is_same_class(obj, a_class):
     """Check if an object is an instance of a given class.
