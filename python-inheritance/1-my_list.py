@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Module that returns the list of available attributes and methods of an object.
+"""
+
+
 class MyList(list):
     """Custom list class that extends the built-in list.
 
