@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Module that returns the list of available attributes and methods of an object.
+"""
+
+
 def inherits_from(obj, a_class):
     """
     Check if an object is an instance of a subclass of a specified class,
