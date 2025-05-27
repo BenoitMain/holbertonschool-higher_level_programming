@@ -27,6 +27,7 @@ class Dog(Animal):
 
     This class implements the sound method to return "Bark".
     """
+
     def sound(self):
         """Return the sound made by a dog.
 
@@ -42,5 +43,6 @@ class Cat(Animal):
         Returns:
             str: The string "Meow".
         """
+
     def sound(self):
         return ("Meow")
