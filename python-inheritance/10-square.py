@@ -58,6 +58,7 @@ class Rectangle(BaseGeometry):
         __init__(width, height):
             Initializes the Rectangle with validated width and height.
     """
+
     def __init__(self, width, height):
         """
         Initialize a new Rectangle.
@@ -95,6 +96,7 @@ class Square(Rectangle):
         area():
             Calculates and returns the area of the square.
     """
+
     def __init__(self, size):
         """
         Initialize a new Square.
