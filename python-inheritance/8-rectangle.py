@@ -1,45 +1,10 @@
 #!/usr/bin/python3
 """
-Module that defines a base class for geometry-related classes.
+Rectangle module, inherits from BaseGeometry.
 """
 
-class BaseGeometry:
-    """
-    A base class for geometry-related classes.
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-    This class serves as a blueprint for future geometry classes.
-    It includes a placeholder method 'area' that should be implemented
-    by any subclass, and a validator method 'integer_validator' for
-    ensuring values are valid integers.
-
-    Methods:
-        area(): Raises an Exception indicating the method is not yet implemented.
-        integer_validator(name, value): Validates that 'value' is a positive integer.
-    """
-
-    def area(self):
-        """
-        Raises:
-            Exception: Always raised with the message 'area() is not implemented'.
-        """
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """
-        Validates that 'value' is a positive integer.
-
-        Args:
-            name (str): The name of the parameter.
-            value (int): The value to validate.
-
-        Raises:
-            TypeError: If 'value' is not an integer.
-            ValueError: If 'value' is not greater than 0.
-        """
-        if type(value) != int:
-            raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
 
 class Rectangle(BaseGeometry):
     """
@@ -56,6 +21,7 @@ class Rectangle(BaseGeometry):
         __init__(width, height):
             Initializes the Rectangle with validated width and height.
     """
+
     def __init__(self, width, height):
         """
         Initialize a new Rectangle.
