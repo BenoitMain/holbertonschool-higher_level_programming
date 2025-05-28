@@ -121,5 +121,5 @@ def shape_info(obj):
             expected to have `area()` and `perimeter()` methods.
     """
 
-    print(f"Area:", obj.area())
-    print(f"Perimeter:", obj.perimeter())
+    print("Area:", obj.area())
+    print("Perimeter:", obj.perimeter())
