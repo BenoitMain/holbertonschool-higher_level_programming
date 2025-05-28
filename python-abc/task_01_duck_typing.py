@@ -1,4 +1,17 @@
 #!/usr/bin/python3
+"""
+Module that defines an abstract Shape class and concrete implementations:
+Circle and Rectangle. It also includes a function to display shape info
+using duck typing.
+
+Classes:
+    Shape: Abstract base class for shapes.
+    Circle: Concrete implementation of a circle.
+    Rectangle: Concrete implementation of a rectangle.
+
+"""
+
+
 import math
 from abc import ABC, abstractmethod
 
@@ -43,8 +56,6 @@ class Circle(Shape):
         Args:
             radius (float): The radius of the circle.
         """
-        if not isinstance(radius, (int, float)):
-            raise TypeError("radius must be a number")
         self.radius = radius
 
     def area(self):
@@ -110,5 +121,5 @@ def shape_info(obj):
             expected to have `area()` and `perimeter()` methods.
     """
 
-    print("Area:", obj.area())
-    print("Perimeter:", obj.perimeter())
+    print(f"Area:", obj.area())
+    print(f"Perimeter:", obj.perimeter())
