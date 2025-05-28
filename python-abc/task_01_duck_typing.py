@@ -27,14 +27,16 @@ class Circle(Shape):
     def __init__(self, radius):
         """Initialize Circle."""
         self.radius = radius
+        if self.radius <= 0:
+            raise ValueError("radius must be greater than 0")
 
     def area(self):
         """Calculate area."""
-        return math.pi * (self.radius ** 2)
+        return math.pi * (abs(self.radius) ** 2)
 
     def perimeter(self):
         """Calculate perimeter."""
-        return 2 * math.pi * self.radius
+        return 2 * math.pi * abs(self.radius)
 
 
 class Rectangle(Shape):
@@ -44,6 +46,8 @@ class Rectangle(Shape):
         """Initialize Rectangle."""
         self.width = width
         self.height = height
+        if self.height <= 0 or self.width <= 0:
+            raise ValueError("width and height must be greater than 0")
 
     def area(self):
         """Calculate area."""
