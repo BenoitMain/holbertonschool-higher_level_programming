@@ -109,7 +109,6 @@ def shape_info(obj):
         obj (object): An object representing a shape,
             expected to have `area()` and `perimeter()` methods.
     """
-    area = obj.area()
-    perimeter = obj.perimeter()
-    print("Area:", area)
-    print("Perimeter:", perimeter)
+
+    print("Area:", obj.area())
+    print("Perimeter:", obj.perimeter())
