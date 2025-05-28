@@ -3,6 +3,7 @@
 Module that defines an empty class called BaseGeometry.
 """
 
+
 class BaseGeometry:
     """
     A base class for geometry-related classes.
@@ -12,12 +13,12 @@ class BaseGeometry:
     by any subclass.
 
     Methods:
-        area(): Raises an Exception indicating the method is not yet implemented.
+     area: Raises an Exception indicating the method is not yet implemented.
     """
 
     def area(self):
         """
         Raises:
-            Exception: Always raised with the message 'area() is not implemented'.
+         Exception: Always raised with the message 'area is not implemented'.
         """
         raise Exception("area() is not implemented")
