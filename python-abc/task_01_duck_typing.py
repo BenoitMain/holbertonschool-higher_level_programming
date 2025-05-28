@@ -43,6 +43,8 @@ class Circle(Shape):
         Args:
             radius (float): The radius of the circle.
         """
+        if not isinstance(radius, (int, float)):
+            raise TypeError("radius must be a number")
         self.radius = radius
 
     def area(self):
