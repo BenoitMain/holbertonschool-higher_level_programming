@@ -1,5 +1,12 @@
 #!/usr/bin/python3
+"""
+This script defines a function to deserialize a JSON-formatted string
+into a native Python data structure.
+"""
+
+
 import json
+
 
 def from_json_string(my_str):
     """Convert a JSON-encoded string to a Python object.
@@ -14,10 +21,5 @@ def from_json_string(my_str):
     Returns:
         Any: The Python object represented by the JSON string.
 
-    Example:
-        >>> from_json_string('[1, 2, 3]')
-        [1, 2, 3]
-        >>> from_json_string('{"id": 12, "name": "John"}')
-        {'id': 12, 'name': 'John'}
     """
     return json.loads(my_str)

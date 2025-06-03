@@ -1,5 +1,12 @@
 #!/usr/bin/python3
+"""
+This script defines a function to save a Python object
+to a text file using its JSON representation.
+"""
+
+
 import json
+
 
 def save_to_json_file(my_obj, filename):
     """Write an object to a file in JSON format.

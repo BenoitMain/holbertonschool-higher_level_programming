@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This module provides a function that converts a Python object to a JSON string.
+"""
+
+
 import json
 
 def to_json_string(my_obj):
@@ -14,10 +19,5 @@ def to_json_string(my_obj):
     Returns:
         str: A string containing the JSON representation of `my_obj`.
 
-    Example:
-        >>> to_json_string([1, 2, 3])
-        '[1, 2, 3]'
-        >>> to_json_string({'id': 12, 'name': 'John'})
-        '{"id": 12, "name": "John"}'
     """
     return json.dumps(my_obj)
