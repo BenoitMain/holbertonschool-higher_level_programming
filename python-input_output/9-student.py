@@ -3,8 +3,10 @@
 Module 9-student
 
 Defines a Student class with public attributes first_name, last_name, and age,
-and a method to_json() that returns a dictionary representation of the instance.
+and a method to_json() that returns a dictionary representation
+of the instance.
 """
+
 
 class Student:
     """Represents a student with first name, last name, and age.
@@ -36,8 +38,4 @@ class Student:
         Returns:
             dict: Dictionary with keys 'first_name', 'last_name', and 'age'.
         """
-        return {
-            "first_name": self.first_name,
-            "last_name": self.last_name,
-            "age": self.age
-        }
+        return self.__dict__
