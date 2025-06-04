@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+""""
+Learn how to serialize and deserialize custom Python objects using
+ the pickle module.
+
+"""
+
 
 import pickle
 
