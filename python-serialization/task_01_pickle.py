@@ -4,7 +4,8 @@ import pickle
 
 
 class CustomObject:
-    """Represents an object with name, age, and student status, serializable via pickle.
+    """Represents an object with name, age, and student status,
+    serializable via pickle.
 
     Attributes:
         name (str): The name of the object.
@@ -68,7 +69,7 @@ class CustomObject:
             filename (str): Path to the pickle file to read.
 
         Returns:
-            CustomObject or None: The deserialized instance, or None on failure.
+            CustomObject or None: The deserialized instance, or None .
         """
         try:
             with open(filename, "rb") as f:
