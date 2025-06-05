@@ -82,7 +82,6 @@ class CustomObject:
                 obj = pickle.load(f)
                 if not isinstance(obj, cls):
                     return None
-        except (FileNotFoundError, pickle.UnpicklingError):
+                return obj
+        except Exception:
             return None
-
-        return obj
