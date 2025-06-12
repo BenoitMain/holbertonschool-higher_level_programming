@@ -1,54 +1,95 @@
 #!/usr/bin/python3
 
-from flask import Flask
-from flask import jsonify
-from flask import request
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
+# In-memory storage of users
 users = {
     "jane": {
-    "username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"
+        "username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"
     },
-         "john": {
-             "username": "john", "name": "John", "age": 30, "city": "New York"
-             }
-         }
+    "john": {
+        "username": "john", "name": "John", "age": 30, "city": "New York"
+    }
+}
 
-#Root endpoint
-@app.route("/", methods = ['GET'])
+@app.route("/", methods=["GET"])
 def home():
+    """
+    Root endpoint that returns a welcome message.
+
+    Returns:
+        str: Welcome message.
+    """
     return "Hello, Flask!"
 
-#Data endpoint
-@app.route("/data", methods = ['GET'])
+
+@app.route("/data", methods=["GET"])
 def data():
+    """
+    Endpoint that returns a list of all usernames.
+
+    Returns:
+        Response: JSON response with list of usernames.
+    """
     return jsonify(list(users.keys()))
 
-#Root endpoint
-@app.route("/status")
+
+@app.route("/status", methods=["GET"])
 def status():
+    """
+    Status endpoint to verify the server is running.
+
+    Returns:
+        str: "OK" string.
+    """
     return "OK"
 
-#Status endpoint
-@app.route("/users/<username>")
-def get_user(username):
-    if username not in users:
-        return jsonify({"error": "User not found"})
-    else:
-        return jsonify(users[username])
 
-#add_user endpoint
-@app.route("/add_user", methods = ['POST'])
-def creat_user():
+@app.route("/users/<username>", methods=["GET"])
+def get_user(username):
+    """
+    Get user data by username.
+
+    Args:
+        username (str): The username to look up.
+
+    Returns:
+        Response: JSON response with user data or error message.
+    """
+    if username not in users:
+        return jsonify({"error": "User not found"}), 404
+    return jsonify(users[username])
+
+
+@app.route("/add_user", methods=["POST"])
+def create_user():
+    """
+    Add a new user from JSON payload.
+
+    Expected JSON body:
+        {
+            "username": "alice",
+            "name": "Alice",
+            "age": 25,
+            "city": "Paris"
+        }
+
+    Returns:
+        Response: JSON response with confirmation message and user data,
+        or error message if validation fails.
+    """
     data = request.get_json()
 
-    #Check username in data
     if "username" not in data:
         return jsonify({"error": "Username is required"}), 400
 
-    #Add username in data
     username = data["username"]
+
+    if username in users:
+        return jsonify({"error": "Username already exists"}), 409
+
     users[username] = data
 
     return jsonify({
@@ -56,5 +97,6 @@ def creat_user():
         "user": data
     }), 201
 
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
