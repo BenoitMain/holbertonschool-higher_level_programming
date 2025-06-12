@@ -5,14 +5,7 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 # In-memory storage of users
-users = {
-    "jane": {
-        "username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"
-    },
-    "john": {
-        "username": "john", "name": "John", "age": 30, "city": "New York"
-    }
-}
+users = {}
 
 
 @app.route("/", methods=["GET"])
@@ -86,7 +79,7 @@ def create_user():
     if "username" not in data:
         return jsonify({"error": "Username is required"}), 400
 
-    username = data["username"]
+    username = data.get("username")
 
     if username in users:
         return jsonify({"error": "Username already exists"}), 409
