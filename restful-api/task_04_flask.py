@@ -16,7 +16,7 @@ def home():
     Returns:
         str: Welcome message.
     """
-    return "Hello, Flask!"
+    return "Welcome to the Flask API!"
 
 
 @app.route("/data", methods=["GET"])
