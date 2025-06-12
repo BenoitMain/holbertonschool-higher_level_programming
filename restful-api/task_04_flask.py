@@ -14,6 +14,7 @@ users = {
     }
 }
 
+
 @app.route("/", methods=["GET"])
 def home():
     """
