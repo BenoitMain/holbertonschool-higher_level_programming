@@ -66,6 +66,11 @@ def protected():
 @jwt_required()
 def admin():
     current_user = get_jwt_identity()  # Récupère l'identité dans le token
+    user_data = users.get(current_user)
+
+    # Vérifier si l'utilisateur a un rôle admin
+    if not user_data or user_data.get("role") != "admin":
+        return jsonify({"msg": "Admins only"}), 403
     return f"Admin Access: Granted"
 
 @jwt.unauthorized_loader
