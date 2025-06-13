@@ -1,4 +1,32 @@
-# Environnement virtuel Python
+# Environnements virtuels
 venv/
+env/
+.venv/
+.env/
+
+# Fichiers de test
+test_*.py
+*.spec.py
 __pycache__/
-*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+
+# Fichiers de logs et outputs
+*.log
+*.out
+*.tmp
+
+# Jetons ou fichiers sensibles
+*.token
+*.secret
+
+# Dépendances installées localement
+*.egg-info/
+dist/
+build/
+
+# Configuration de l’éditeur
+.vscode/
+.idea/
+*.swp
