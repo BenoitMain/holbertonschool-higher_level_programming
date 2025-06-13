@@ -12,6 +12,10 @@ app = Flask(__name__)
 # Initialisation de l'authentification HTTP
 auth = HTTPBasicAuth()
 
+@auth.error_handler
+def unauthorized():
+    return jsonify({"error": "Unauthorized"}), 401
+
 # Clé secrète pour signer les tokens JWT
 app.config["JWT_SECRET_KEY"] = "super-secret-key"
 
