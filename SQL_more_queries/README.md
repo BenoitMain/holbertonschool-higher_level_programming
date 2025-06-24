@@ -25,11 +25,11 @@ By the end of this project, you should be able to explain, **without the help of
 You are encouraged to read or watch the following resources:
 
 ### 🔸 User and Privileges
-- [How To Create a New User and Grant Permissions in MySQL](#)
-- [How To Use MySQL GRANT Statement To Grant Privileges To a User](#)
+- [How To Create a New User and Grant Permissions in MySQL](https://intranet.hbtn.io/rltoken/1tuxYhEv__bmrwkAicbjpA)
+- [How To Use MySQL GRANT Statement To Grant Privileges To a User](https://intranet.hbtn.io/rltoken/km4VxJIBhjKVfiWEBETk-w)
 
 ### 🔸 Constraints and Design
-- [MySQL Constraints](#)
+- [MySQL Constraints](https://intranet.hbtn.io/rltoken/AHI2a6vFyr8h4LeI6xK96w)
 - **Database Design with UML and SQL (4th edition)** – focus on:
   - Basic query operation: the join
   - SQL technique: multiple joins and the `DISTINCT` keyword
@@ -38,16 +38,16 @@ You are encouraged to read or watch the following resources:
   - SQL technique: `UNION` and `MINUS`
 
 ### 🔸 Reference and Style
-- [MySQL Cheat Sheet](#)
-- [The Seven Types of SQL Joins](#)
-- [MySQL Tutorial](#)
-- [SQL Style Guide](https://www.sqlstyle.guide/)
-- [MySQL 8.0 SQL Statement Syntax](https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html)
+- [MySQL Cheat Sheet](https://intranet.hbtn.io/rltoken/g8QlxhHt2_WHdIXE-2oYYw)
+- [The Seven Types of SQL Joins](https://intranet.hbtn.io/rltoken/o6faV44f8S34zW3FiO5Mgg)
+- [MySQL Tutorial](https://intranet.hbtn.io/rltoken/T3VjE1yBfwJcd1hDD4tItw)
+- [SQL Style Guide](https://intranet.hbtn.io/rltoken/0NaQZjOUvQuWy0xGPhTkVw)
+- [MySQL 8.0 SQL Statement Syntax](https://intranet.hbtn.io/rltoken/R5KAnzO4iwYo2LgD3eKL8A)
 
 ### 🔸 Extra resources on relational database design
-- [Design](#)
-- [Normalization](#)
-- [ER Modeling](#)
+- [Design](https://intranet.hbtn.io/rltoken/A81_Vk2TV-f_f5wG0HK6Zw)
+- [Normalization](https://intranet.hbtn.io/rltoken/cwgE_DVy7l3ap6lCVJsPZQ)
+- [ER Modeling](https://intranet.hbtn.io/rltoken/1JFNpSloiEAI7aLW2rnyKw)
 
 ---
 
