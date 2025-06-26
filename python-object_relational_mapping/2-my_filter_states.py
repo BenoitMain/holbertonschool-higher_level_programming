@@ -13,7 +13,6 @@ if __name__ == "__main__":
         port=3306
     )
     cur = db.cursor()
-    # Utilisation de format comme demandé (attention à l’injection SQL)
     cur.execute("SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC"
                 .format(sys.argv[4]))
     rows = cur.fetchall()
