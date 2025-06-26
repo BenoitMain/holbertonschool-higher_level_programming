@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Script that lists all states where name matches the argument"""
+"""
+Script that lists all states where name matches the argument
+"""
 
 import MySQLdb
 import sys
