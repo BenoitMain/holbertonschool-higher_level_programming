@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Lists all cities from the database hbtn_0e_4_usa with their state name,
+sorted by cities.id ascending.
+"""
 
 
 import MySQLdb
@@ -14,9 +18,8 @@ if __name__ == "__main__":
     )
     cur = db.cursor()
     cur.execute(
-        "SELECT cities_id, city_name, state_name FROM cities
-        JOIN states ON cities.state_id = states.id
-        WHERE BINARY name = %s ORDER BY id ASC",
+        """SELECT cities.id, cities.name, states.name FROM cities
+        JOIN states ON cities.state_id = states.id ORDER BY cities.id ASC""",
         )
     rows = cur.fetchall()
     for row in rows:
