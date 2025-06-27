@@ -12,7 +12,6 @@ Arguments:
     state name: State to filter cities by
 """
 
-
 import MySQLdb
 import sys
 
