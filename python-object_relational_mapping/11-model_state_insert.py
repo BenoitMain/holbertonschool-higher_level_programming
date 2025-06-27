@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-Adds the State object 'Louisiana' to the database hbtn_0e_6_usa.
-Prints the id of the new State after creation.
-
+Changes the name of the State object with id=2 to 'New Mexico'
+in the database hbtn_0e_6_usa using SQLAlchemy.
 """
 
 import sys
@@ -20,9 +19,9 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    new_state = State(name="Louisiana")
-    session.add(new_state)
-    session.commit()
-    print(new_state.id)
+    state = session.query(State).filter(State.id == 2).first()
+    if state:
+        state.name = "New Mexico"
+        session.commit()
 
     session.close()
