@@ -32,8 +32,7 @@ if __name__ == "__main__":
         "ORDER BY cities.id ASC"
     )
     cur.execute(query, (state,))
-    villes = [row[0] for row in cur.fetchall()]
-    if villes:
-        print(", ".join(villes))
+    rows = cur.fetchall()
+    print(", ".join(row[0] for row in rows))
     cur.close()
     db.close()
