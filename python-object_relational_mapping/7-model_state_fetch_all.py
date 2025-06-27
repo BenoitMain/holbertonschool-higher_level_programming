@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+Lists all State objects from the database hbtn_0e_6_usa.
+
+This script connects to a MySQL database using SQLAlchemy ORM and retrieves
+all State objects, displaying them in ascending order by their ID.
+
+"""
 
 import sys
 from model_state import Base, State
