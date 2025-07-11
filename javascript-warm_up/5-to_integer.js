@@ -8,4 +8,5 @@ if (isNaN(num)) {
   console.log('Not a number');
 } else {
   // If valid number, display the integer value
-  console.log('My number: ' + num);}
+  console.log('My number: ' + num);
+}
