@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+{% if items %}
+    {% for item in items %}
+        <li>{{ item }}</li>
+    {% endfor %}
+{% else %}
+    <p>No items found.</p>
+{% endif %}
+</body>
+</html>
