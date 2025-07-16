@@ -41,7 +41,20 @@ def products():
     else:
         error = "Wrong source"
         return render_template("product_display.html", error=error)
-    return render_template("product_display.html", products=products)
+    if not id:
+        return render_template("product_display.html", products=products)
+
+    try:
+        id_int = int(id)
+    except ValueError:
+        return render_template("product_display.html", error="Invalid ID")
+
+    product = next((p for p in products if int(p['id']) == id_int), None)
+
+    if product is None:
+        return render_template("product_display.html", error="Product not found")
+
+    return render_template("product_display.html", products=[product])
 
 def read_json():
     with open("products.json") as f:
