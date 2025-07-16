@@ -1,35 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My product display</title>
-</head>
-<body>
-    {% include 'header.html' %}
+{% include 'header.html' %}
 
-    {% if error %}
-      <h2 style="color: red;">{{ error }}</h2>
-    {% else %}
-      <table border="1" cellpadding="5" cellspacing="0">
+<h1>Product List</h1>
+
+{% if error %}
+    <p>{{ error }}</p>
+{% elif products %}
+    <table border="1">
         <thead>
-          <tr>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Price</th>
-          </tr>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+            </tr>
         </thead>
         <tbody>
-          {% for product in products %}
+            {% for product in products %}
             <tr>
-              <td>{{ product.name }}</td>
-              <td>{{ product.category }}</td>
-              <td>{{ product.price }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.price }}</td>
             </tr>
-          {% endfor %}
+            {% endfor %}
         </tbody>
-      </table>
-    {% endif %}
+    </table>
+{% else %}
+    <p>No products found</p>
+{% endif %}
 
-    {% include 'footer.html' %}
-</body>
-</html>
+{% include 'footer.html' %}
