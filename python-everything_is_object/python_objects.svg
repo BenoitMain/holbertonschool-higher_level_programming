@@ -1,0 +1,28 @@
+<!-- Save as python_objects.svg and embed with <img src="python_objects.svg"> -->
+<svg width="420" height="180" viewBox="0 0 420 180" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="400" height="160" rx="20" fill="#f7f7f7" stroke="#306998" stroke-width="3"/>
+  <text x="210" y="40" font-size="22" font-family="Arial" fill="#306998" text-anchor="middle" font-weight="bold">
+    Everything is an Object!
+  </text>
+  <g>
+    <rect x="40" y="70" width="60" height="40" rx="8" fill="#ffd343" stroke="#306998" stroke-width="2"/>
+    <text x="70" y="95" font-size="16" font-family="Arial" fill="#306998" text-anchor="middle">int</text>
+    <line x1="100" y1="90" x2="140" y2="90" stroke="#306998" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="140" y="70" width="60" height="40" rx="8" fill="#ffd343" stroke="#306998" stroke-width="2"/>
+    <text x="170" y="95" font-size="16" font-family="Arial" fill="#306998" text-anchor="middle">str</text>
+    <line x1="200" y1="90" x2="240" y2="90" stroke="#306998" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="240" y="70" width="60" height="40" rx="8" fill="#ffd343" stroke="#306998" stroke-width="2"/>
+    <text x="270" y="95" font-size="16" font-family="Arial" fill="#306998" text-anchor="middle">list</text>
+    <line x1="300" y1="90" x2="340" y2="90" stroke="#306998" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="340" y="70" width="60" height="40" rx="8" fill="#ffd343" stroke="#306998" stroke-width="2"/>
+    <text x="370" y="95" font-size="16" font-family="Arial" fill="#306998" text-anchor="middle">dict</text>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#306998"/>
+    </marker>
+  </defs>
+  <text x="210" y="150" font-size="14" font-family="Arial" fill="#666" text-anchor="middle">
+    In Python, every value is an object: numbers, strings, lists, dicts, and more!
+  </text>
+</svg>
